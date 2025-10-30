@@ -20,7 +20,15 @@ jobs:
       - name: Set up Node.js for User Service
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '22'
+
+      - name: Debug directory structure
+        run: |
+          echo "Current directory:"
+          pwd
+          echo
+          echo "List of files and folders:"
+          ls -R
 
       - name: Install dependencies for User Service
         run: npm install
@@ -40,7 +48,7 @@ jobs:
       - name: Set up Node.js for Video Service
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install dependencies for Video Service
         run: npm install
@@ -60,7 +68,7 @@ jobs:
       - name: Set up Node.js for API Gateway
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install dependencies for API Gateway
         run: npm install
@@ -80,7 +88,7 @@ jobs:
       - name: Set up Node.js for Frontend
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Install dependencies for Frontend
         run: npm install
