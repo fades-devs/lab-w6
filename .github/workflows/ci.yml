@@ -24,10 +24,10 @@ jobs:
 
      - name: Install dependencies for User Service
        run: npm install
-       working-directory: ./lab-w6-app/user-service
+       working-directory: ./user-service
 
      - name: Build Docker image for User Service
-       run: docker build -t user-service ./lab-w6-app/user-service
+       run: docker build -t user-service ./user-service
 
  # Video Service Job
  video-service:
@@ -44,10 +44,10 @@ jobs:
 
      - name: Install dependencies for Video Service
        run: npm install
-       working-directory: ./lab-w6-app/video-service
+       working-directory: ./video-service
 
      - name: Build Docker image for Video Service
-       run: docker build -t video-service ./lab-w6-app/video-service
+       run: docker build -t video-service ./video-service
 
  # API Gateway Job
  api-gateway:
@@ -64,10 +64,10 @@ jobs:
 
      - name: Install dependencies for API Gateway
        run: npm install
-       working-directory: ./lab-w6-app/api-gateway
+       working-directory: ./api-gateway
 
      - name: Build Docker image for API Gateway
-       run: docker build -t api-gateway ./lab-w6-app/api-gateway
+       run: docker build -t api-gateway ./api-gateway
 
  # Frontend Service Job
  frontend:
@@ -84,7 +84,7 @@ jobs:
 
      - name: Install dependencies for Frontend
        run: npm install
-       working-directory: ./lab-w6-app/frontend
+       working-directory: ./frontend
 
      - name: Build Docker image for Frontend
-       run: docker build -t frontend ./lab-w6-app/frontend
+       run: docker build -t frontend ./frontend
