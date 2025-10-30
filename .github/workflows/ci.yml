@@ -1,33 +1,33 @@
 name: CI/CD Pipeline
 
 on:
- push:
-   branches:
-     - main
- pull_request:
-   branches:
-     - main
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
- # User Service Job
+  # User Service Job
   user-service:
     name: 🐳 User Service - Build and Push Docker Image
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-      uses: actions/checkout@v3
+        uses: actions/checkout@v3
 
       - name: Set up Node.js for User Service
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
 
       - name: Install dependencies for User Service
-      run: npm install
-      working-directory: ./user-service
+        run: npm install
+        working-directory: ./user-service
 
       - name: Build Docker image for User Service
-      run: docker build -t user-service ./user-service
+        run: docker build -t user-service ./user-service
 
  # Video Service Job
  video-service:
